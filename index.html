@@ -1,27 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SquidJump Discord Activity</title>
+    <title>Squid Jump II</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
         iframe { width: 100%; height: 100%; border: none; }
     </style>
-    <!-- Imports the mandatory Discord Security Handshake Library -->
-    <script src="https://jsdelivr.net"></script>
 </head>
 <body>
-    <iframe id="game" src="https://github.io"></iframe>
-
-    <script>
-        // Forces Discord to recognize the game window safely
-        const discordSdk = new DiscordSDK.DiscordSDK({ clientId: "1541185044192694302" });
-        
-        async function setupDiscord() {
-            await discordSdk.ready();
-            console.log("Discord Handshake Successful!");
-        }
-        
-        setupDiscord().catch(console.error);
-    </script>
+    <iframe src="https://felipemanga.github.io/ProjectABE/?url=https://raw.githubusercontent.com/mrjusty2014-tech/special-sniffle/refs/heads/main/SquidJump.hex"></iframe>
 </body>
 </html>
