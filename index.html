@@ -2,7 +2,9 @@
 <html>
 <head>
     <title>Squid Jump II</title>
-    <!-- 1. ADDED: This connects your game to Discord's background system -->
+    <!-- FIX: This allows Discord to safely open your page inside their app frame -->
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://*.discord.com https://discord.com;">
+    
     <script src="https://cloudflare.com"></script>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
@@ -10,10 +12,10 @@
     </style>
 </head>
 <body>
+    <!-- Keep your full username path here so the emulator pulls the file -->
     <iframe src="https://felipemanga.github.io/ProjectABE/?url=https://raw.githubusercontent.com/mrjusty2014-tech/special-sniffle/refs/heads/main/SquidJump.hex"></iframe>
 
     <script>
-        // 2. ADDED: This tells Discord "the game is ready, you can show it now"
         const discordSdk = new Discord.DiscordSDK(window.location.search);
         discordSdk.ready();
     </script>
